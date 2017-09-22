@@ -5,7 +5,11 @@ import heros from '../mock/mock-heros';
 @Injectable()
 
 export class HeroService {
-    getHeros(): Hero[] {
-        return heros;
+    getHeros(): Promise<Hero[]> {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve(heros);
+            }, 2000);
+        });
     }
 }
