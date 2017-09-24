@@ -1,22 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
-    <div style="text-align:center">
-        <h1>
-            Welcome to {{title}}!
-        </h1>
-    </div>
-    <div class="main">
-        <div class="left">
-            <h2>my heros</h2>
-            <ul>
-                <li *ngFor="let hero of heros" (click)="clickHero(hero)" [ngClass]="{active : hero === selectHero}" [class.select]="hero === selectHero">
-                    <span class="badge">{{hero.id}}</span>
-                    <span class="name">{{hero.name}}</span>
-                </li>
-            </ul>
-        </div>
-        <div class="right" *ngIf="!!selectHero">
-            <app-hero-detail [hero]="selectHero"></app-hero-detail>
-        </div>
-    </div>
+<div class="main-app" style="text-align:center">
+    <h1>
+        Welcome to {{title}}!
+    </h1>
+    <nav>
+        <a routerLink="">dashboard</a>
+        <a routerLink="/heros">Heroes</a>
+    </nav>
+    <router-outlet></router-outlet>
 </div>

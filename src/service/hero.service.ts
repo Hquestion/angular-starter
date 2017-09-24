@@ -9,7 +9,17 @@ export class HeroService {
         return new Promise(resolve => {
             setTimeout(() => {
                 resolve(heros);
-            }, 2000);
+            }, 200);
+        });
+    }
+    getHeroById(id): Promise<Hero> {
+        return new Promise(resolve => {
+            this.getHeros().then(heros => {
+                const hero = heros.find(item => {
+                    return item.id === id;
+                });
+                resolve(hero);
+            });
         });
     }
 }

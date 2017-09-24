@@ -1,43 +1,16 @@
-.container {
-    width: 100%;
-    text-align: left;
-}
-.main {
+.main-app {
     width: 80%;
     margin: 0 auto;
 }
-.main:after {
-    content: '\20';
-    clear: both;
-    opacity: 0;
-}
-.left {
-    float: left;
-    width: 40%;
-    border: 1px solid #ccc;
+nav {
+    background: #efefef;
     padding: 10px;
 }
-.right {
-    float: right;
-    width: 40%;
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-.left ul li {
-    width: 80%;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 10px;
-    background: #ccc;
-    cursor: pointer;
-}
-.left ul li .badge {
+
+nav a {
+    padding: 5px 15px;
+    background: #9de9a7;
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    background: #eb87ad;
-}
-.left ul li.active {
-    background: #4d92bc;
+    color: #fff;
+    text-decoration: none;
 }
